@@ -6,7 +6,7 @@ import prisma from "@/lib/prismadb";
 import { handleError } from "../utils";
 
 // CREATE
-export async function createUser(user: CreateUserParams) {
+export const createUser = async (user: CreateUserParams) => {
   try {
     const newUser = await prisma.user.create({
         data: user

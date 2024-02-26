@@ -14,14 +14,14 @@ datasource db {
 }
 
 model User {
-  id            String @id @default(auto()) @map("_id") @db.ObjectId
-  clerkId       String
-  firstName     String
-  lastName      String
-  username      String
-  photo         String
-  planId        Int    @default(1)
-  creditBalance Int    @default(10)
+  id            String  @id @default(auto()) @map("_id") @db.ObjectId
+  clerkId       String?
+  firstName     String?
+  lastName      String?
+  username      String?
+  photo         String?
+  planId        Int     @default(1)
+  creditBalance Int     @default(10)
 
   images       Image[]
   transactions Transaction[]
