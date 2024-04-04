@@ -6,6 +6,8 @@ import User from "../database/models/user.model";
 import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
 
+import prisma from '../prismadb'
+
 // CREATE
 export async function createUser(user: CreateUserParams) {
   try {
